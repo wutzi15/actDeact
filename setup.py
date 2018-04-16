@@ -134,7 +134,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['peppercorn'],  # Optional
+    #install_requires=['peppercorn'],  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
@@ -172,11 +172,13 @@ setup(
     #
     # For example, the following would provide a command called `sample` which
     # executes the function `main` from this package when invoked:
-    # entry_points={  # Optional
-    #     'console_scripts': [
-    #         'sample=sample:main',
-    #     ],
-    # },
+    entry_points={  # Optional
+        'console_scripts': [
+            'act=act:main',
+            'deact=deact:main',
+            'actDeact=actDeact:main',
+        ],
+    },
 
     # List additional URLs that are relevant to your project as a dict.
     #
