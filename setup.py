@@ -99,7 +99,7 @@ setup(
         'Topic :: System :: Systems Administration',
 
         # Pick your license as you wish
-        'License :: OSI Approved :: Apache',
+        'License :: OSI Approved :: Apache Software License',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
