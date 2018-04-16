@@ -1,7 +1,10 @@
 # A very simple [De]Activator for config files
 
 This tool renames files by adding and removing a predefined prefix and suffix. It's intented use is to quickly activate and deactivate config files. 
-
+## Installation 
+```
+$ pip install ActDeact
+```
 ## Usage
 ```
 Usage: actDeact [options] args
