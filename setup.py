@@ -134,7 +134,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    #install_requires=['peppercorn'],  # Optional
+    install_requires=['ConfigParser'],  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
@@ -154,10 +154,10 @@ setup(
     #
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
-    # package_data={  # Optional
-    #     'sample': ['package_data.dat'],
-    # },
-
+    package_data={  # Optional
+        '': ['*.conf'],
+    },
+    include_package_data=True,
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
     # http://docs.python.org/3.4/distutils/setupscript.html#installing-additional-files
