@@ -95,8 +95,8 @@ setup(
         'Development Status :: 4 - Beta',
 
         # Indicate who your project is intended for
-        'Intended Audience :: Developers',
-        #'Topic :: Software Development :: Build Tools',
+        'Intended Audience :: System Administrators',
+        'Topic :: Systems Administration',
 
         # Pick your license as you wish
         'License :: OSI Approved :: Apache',

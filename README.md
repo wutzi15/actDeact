@@ -1,37 +1,30 @@
-# A sample Python project
+# A very simple [De]Activator for config files
 
-A sample project that exists as an aid to the [Python Packaging User
-Guide][packaging guide]'s [Tutorial on Packaging and Distributing
-Projects][distribution tutorial].
+This tool renames files by adding and removing a predefined prefix and suffix. It's intented use is to quickly activate and deactivate config files. 
 
-This project does not aim to cover best practices for Python project
-development as a whole. For example, it does not provide guidance or tool
-recommendations for version control, documentation, or testing.
+## Usage
+```
+Usage: actDeact [options] args
 
-[The source for this project is available here][src].
+Options:
+  --version         show program's version number and exit
+  -h, --help        show this help message and exit
+  -a, --activate    Activate file(s)
+  -d, --deactivate  Deactivate file(s)
+  -v, --verbose     Verbose output
+  -c, --config      Show the filename of the config file for editing
+```
+Also two helper programs `act` and `deact` are provided. They are aliases to `actDeact -d` and `actDeact -a` and pass every argument directly to those programs. 
+### Example
+`actDeact -d foo` renames `foo` to `foo_bak` by default. This is equivaltent to `deact foo` .
+`actDeact -a foo` renames `foo_bak` to `foo` by default. This is equivaltent to `act foo` .
 
-Most of the configuration for a Python project is done in the `setup.py` file,
-an example of which is included in this project. You should edit this file
-accordingly to adapt this sample project to your needs.
+## Configuration 
+`actDeact -c` shows the filename of the configuration file. Its default content is:
+```
+[Main]
+Prefix=
+Suffix=_bak
+```
+In this file a prefix and a suffix can be set. 
 
-----
-
-This is the README file for the project.
-
-The file should use UTF-8 encoding and can be written using
-[reStructuredText][rst] or [markdown][md use] with the appropriate [key set][md
-use]. It will be used to generate the project webpage on PyPI and will be
-displayed as the project homepage on common code-hosting services, and should be
-written for that purpose.
-
-Typical contents for this file would include an overview of the project, basic
-usage examples, etc. Generally, including the project changelog in here is not a
-good idea, although a simple “What's New” section for the most recent version
-may be appropriate.
-
-[packaging guide]: https://packaging.python.org
-[distribution tutorial]: https://packaging.python.org/en/latest/distributing.html
-[src]: https://github.com/pypa/sampleproject
-[rst]: http://docutils.sourceforge.net/rst.html
-[md]: https://tools.ietf.org/html/rfc7764#section-3.5 "CommonMark variant"
-[md use]: https://packaging.python.org/specifications/core-metadata/#description-content-type-optional
