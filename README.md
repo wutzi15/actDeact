@@ -6,6 +6,12 @@ This tool renames files by adding and removing a predefined prefix and suffix. I
 $ pip install ActDeact
 ```
 ## Usage
+### Shorthand 
+`deact foo` moves foo to foo_bak.
+
+`act foo_bak` moves foo_bak to foo.
+
+### Main Program 
 ```
 Usage: actDeact [options] args
 
