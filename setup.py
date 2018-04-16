@@ -96,7 +96,7 @@ setup(
 
         # Indicate who your project is intended for
         'Intended Audience :: System Administrators',
-        'Topic :: Systems Administration',
+        'Topic :: System :: Systems Administration',
 
         # Pick your license as you wish
         'License :: OSI Approved :: Apache',
